@@ -1,0 +1,45 @@
+{% extends 'admin/layoutAdmin.html' %}
+{% from 'bootstrap4/form.html' import render_form %}
+{% block content %}
+<div class="container-fluid px-4">
+    <h1 class="mt-4">Redes Sociales</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item"><a href="index.html">Inicio</a></li>
+        <li class="breadcrumb-item active">Redes Sociales</li>
+    </ol>
+ 
+    <div class="card mb-4">
+        <div class="card-body">
+            <table id="datatablesSimple">
+                <thead>
+                    <tr>
+                        <th>Icono</th>
+                        <th>URL</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tfoot>
+                    <tr>
+                        <th>Icono</th>
+                        <th>URL</th>
+                        <th></th>
+                    </tr>
+                </tfoot>
+                <tbody>
+                    {% for red in redes %}
+                    <tr>
+                        <td>{{red['icono']}}</td>
+                        <td>{{red['url']}}</td>
+                        <td>
+                            <a href="/admin/red/{{red['id']}}" class="btn btn-primary">Editar</a>
+                            <a href="/admin/delred/{{red['id']}}" class="btn btn-danger">Eliminar</a>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+            {{render_form(red_form)}}
+        </div>
+    </div>
+</div>
+{% endblock %}
