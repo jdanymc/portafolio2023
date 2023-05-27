@@ -1,5 +1,5 @@
 flask
-urllib3==2.0.0
+urllib3==1.26.16
 firebase_admin==6.0.0
 python-dotenv
 #pyrebase4
