@@ -1,8 +1,8 @@
 flask
-firebase_admin
+firebase_admin==6.0.0
 python-dotenv
 #pyrebase4
-#requests-toolbelt==0.10.1
+requests-toolbelt==0.10.1
 Flask-WTF
 bootstrap-flask
 Gunicorn
